@@ -15,7 +15,7 @@ Here are the available configuration options for the `character.json` file:
 
 | Key                             | Type    | Default  | Description                                                                                         |
 | ------------------------------- | ------- | -------- | --------------------------------------------------------------------------------------------------- |
-| `clients`                       | Array   | Required | Specifies the client type (e.g., `["telegram"]`).                                                   |
+| `plugins`                       | Array   | Required | Specifies the client type (e.g., `["@elizaos/client-telegram"]`).                                                   |
 | `allowDirectMessages`           | Boolean | `false`  | Determines whether the bot should respond to direct messages (DMs).                                 |
 | `shouldOnlyJoinInAllowedGroups` | Boolean | `false`  | Ensures the bot only joins and responds in specified groups.                                        |
 | `allowedGroupIds`               | Array   | `[]`     | Lists the group IDs the bot is allowed to interact with (requires `shouldOnlyJoinInAllowedGroups`). |
@@ -28,7 +28,7 @@ Below is an example configuration file with all options:
 
 ```json
 {
-  "clients": ["telegram"],
+  "plugins": ["@elizaos/client-telegram"],
   "allowDirectMessages": true,
   "shouldOnlyJoinInAllowedGroups": true,
   "allowedGroupIds": ["-123456789", "-987654321"],
@@ -37,7 +37,7 @@ Below is an example configuration file with all options:
     "telegramMessageHandlerTemplate": "Your custom template here"
   },
   "secrets": {
-    "key": "<your-bot-token>"
+    "TELEGRAM_BOT_TOKEN": "<your-bot-token>"
   }
 }
 ```
